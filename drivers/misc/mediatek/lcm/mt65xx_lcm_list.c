@@ -1059,6 +1059,9 @@ LCM_DRIVER *lcm_driver_list[] = {
 #if defined(AUO_WUXGA_DSI_VDO)
 	&auo_wuxga_dsi_vdo_lcm_drv,
 #endif
+#if defined(NT36672_DSI_VDO_FHD_AUO_60_YKL)
+        &nt36672_dsi_vdo_fhd_auo_60_ykl_lcm_drv,
+#endif
 };
 
 unsigned char lcm_name_list[][128] = {
