@@ -446,9 +446,9 @@ static void mtk_enable_otg_mode(void)
 #if defined(CONFIG_MTK_BQ25898_DUAL_SUPPORT)
 	bq25898_otg_en(0x01);
 	bq25898_set_boost_ilim(0x01);
-#else
-	set_chr_enable_otg(0x1);
-	set_chr_boost_current_limit(1500);
+//#else
+//	set_chr_enable_otg(0x1);
+//	set_chr_boost_current_limit(1500);
 #endif
 }
 
@@ -456,8 +456,8 @@ static void mtk_disable_otg_mode(void)
 {
 #if defined(CONFIG_MTK_BQ25898_DUAL_SUPPORT)
 	bq25898_otg_en(0x0);
-#else
-	set_chr_enable_otg(0x0);
+//#else
+//	set_chr_enable_otg(0x0);
 #endif
 }
 
