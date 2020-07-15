@@ -617,6 +617,11 @@ KBUILD_CFLAGS	+= $(call cc-disable-warning, int-in-bool-context)
 KBUILD_CFLAGS	+= $(call cc-disable-warning, attribute-alias)
 KBUILD_CFLAGS	+= $(call cc-option,-fno-PIE)
 KBUILD_AFLAGS	+= $(call cc-option,-fno-PIE)
+# Fix build using gcc 9.3.0
+KBUILD_CFLAGS   += $(call cc-disable-warning, memset-elt-size)
+KBUILD_CFLAGS   += $(call cc-disable-warning, duplicate-decl-specifier)
+KBUILD_CFLAGS   += $(call cc-disable-warning, array-bounds)
+KBUILD_CFLAGS   += $(call cc-disable-warning, misleading-indentation)
 
 ifdef CONFIG_CC_OPTIMIZE_FOR_SIZE
 KBUILD_CFLAGS	+= -Os $(call cc-disable-warning,maybe-uninitialized,)
